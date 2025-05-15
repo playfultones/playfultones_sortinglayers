@@ -19,7 +19,7 @@ namespace playfultones
 
     void SortingLayerManager::setSortingLayer (juce::Component& childComp, int layer)
     {
-        componentLayers[&childComp] = layerId;
+        componentLayers[&childComp] = layer;
         updateZOrder();
     }
 
@@ -35,7 +35,7 @@ namespace playfultones
             if (it != componentLayers.end())
                 components.emplace_back (childComp, it->second);
             else
-                components.emplace_back (childComp, Layer::defaultLayer);
+                components.emplace_back (childComp, Layer::Default);
         }
 
         std::stable_sort (components.begin(), components.end(), [] (const auto& a, const auto& b) {
