@@ -1,6 +1,6 @@
 #pragma once
 
-namespace playfultones
+namespace PlayfulTones
 {
     /**
      * Wrapper for a component that provides sorting layer functionality.
@@ -33,4 +33,4 @@ namespace playfultones
         std::unordered_map<juce::Component*, int> componentLayers;
         void updateZOrder();
     };
-} // namespace playfultones
+} // namespace PlayfulTones

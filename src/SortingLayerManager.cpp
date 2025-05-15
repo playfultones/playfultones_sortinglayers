@@ -1,4 +1,4 @@
-namespace playfultones
+namespace PlayfulTones
 {
     SortingLayerManager::SortingLayerManager (juce::Component& componentToWrap)
         : component (componentToWrap)
@@ -47,4 +47,4 @@ namespace playfultones
         for (const auto& [comp, layer] : components)
             comp->toFront (false);
     }
-} // namespace playfultones
+} // namespace PlayfulTones
